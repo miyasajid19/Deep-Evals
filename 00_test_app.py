@@ -89,3 +89,7 @@ test_case = LLMTestCase(
     expected_output="A persistent cough and fever could indicate a range of illnesses, from a mild viral infection to more serious conditions like pneumonia or COVID-19. You should seek medical attention if your symptoms worsen, persist for more than a few days, or are accompanied by difficulty breathing, chest pain, or other concerning signs."
 )
 evaluate([test_case], [correctness_metric])
+
+
+# to run the test, execute the following command in your terminal:
+# deepeval test run 00_test_app.py
