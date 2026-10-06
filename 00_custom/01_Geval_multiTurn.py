@@ -26,6 +26,17 @@ faithfulness = ConversationalGEval(
     evaluation_params=[MultiTurnParams.CONTENT],
 )
 
+professionalism_metric = ConversationalGEval(
+    name="Professionalism",
+    model=CustomOpenAI(),
+    evaluation_steps=[
+        "Check whether every assistant turn maintains a courteous, professional tone",
+        "Heavily penalize slang, sarcasm, or dismissive language towards the user",
+        "Hedged or uncertain answers are OK as long as they stay respectful"
+    ],
+    evaluation_params=[MultiTurnParams.CONTENT],
+)
+
 test_cases = [
     ConversationalTestCase(
         scenario="User asking about the capital city of Nepal.",
@@ -47,4 +58,4 @@ test_cases = [
     ),
 ]
 
-evaluate(test_cases=test_cases, metrics=[correctness, faithfulness])
+evaluate(test_cases=test_cases, metrics=[correctness, faithfulness, professionalism_metric])
