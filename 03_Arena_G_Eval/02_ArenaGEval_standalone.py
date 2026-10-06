@@ -37,6 +37,7 @@ a_test_case = ArenaTestCase(
 # 2. DEFINE THE METRIC
 # ==========================================
 metric = ArenaGEval(
+    model=CustomOpenAI(),
     name="Clarity Winner",
     criteria="Choose the contestant whose response is clearer and easier to follow.",
     evaluation_params=[SingleTurnParams.INPUT, SingleTurnParams.ACTUAL_OUTPUT],
