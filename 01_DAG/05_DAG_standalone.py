@@ -48,8 +48,8 @@ metric = DAGMetric(
 # evaluate() or `deepeval test run`.
 
 test_case = LLMTestCase(
-    input="What is the capital of France?",
-    actual_output="The capital of France is Paris.",
+    input="Who is the main character in the anime Naruto?",
+    actual_output="Naruto Uzumaki is the main character in the anime Naruto.",
 )
 
 metric.measure(test_case)
