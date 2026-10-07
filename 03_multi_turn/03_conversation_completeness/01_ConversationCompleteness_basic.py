@@ -41,11 +41,11 @@ conversation_completeness = ConversationCompletenessMetric(
 convo_test_case = ConversationalTestCase(
     turns=[
         Turn(role="user",      content="Hi, I want to check the status of my refund from last week."),
-        Turn(role="assistant", content="Your refund was processed on Monday and should land within 3-5 business days."),
-        Turn(role="user",      content="Great. Also, how do I set up a return for a different order?"),
-        Turn(role="assistant", content="You can start a return from your order history page — pick the order, hit 'Return Item', and we'll email you a prepaid label."),
-        Turn(role="user",      content="Last thing — I need to change the email on my account from ali@old.com to ali@new.com."),
-        Turn(role="assistant", content="Done — your account email is now ali@new.com. I kept ali@old.com as a forwarding alias for 30 days just in case."),
+        Turn(role="assistant", content="Your refund was processed on Monday."),
+        Turn(role="user",      content="then what is the status tell everything at once?"),
+        Turn(role="assistant", content="Its shipped."),
+        Turn(role="user",      content="Tell everything at once. when will i get it?"),
+        Turn(role="assistant", content="you will get it "),
     ]
 )
 
